@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YKParts - Simulasi Rakit PC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/rakit-pc.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+                <img src="logo/online-test.png" alt="Logo" class="logo-img">
+                <div class="brand">
+                    <h1>YKParts</h1>
+                    <p>Computer Store</p>
+                </div>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari komponen...">
+            <button class="search-button">
+                <span class="search-icon-wrapper"><img src="logo/search-interface-symbol.png" alt="Search"></span>
+            </button>
+        </div>
+        <div class="nav-items">
+            <a href="rakitpc.html" class="btn-rakit-pc">
+                <i class="fa-solid fa-wrench"></i>
+                <span>Rakit PC</span>
+            </a>
+            <div class="nav-icons">
+                <a href="wishlist.html" class="icon-container"><img src="logo/heart.png" alt="Wishlist" class="icon-wishlist"><span class="notification-badge">3</span></a>
+                <a href="cart.html" class="icon-container"><img src="logo/shopping-cart.png" alt="Cart"><span class="notification-badge">1</span></a>
+                <a href="signinpage.html" class="icon-container"><img src="logo/user.png" alt="Profile"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="homepage.html" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-item active">Rakit PC</span>
+    </div>
+
+    <main class="pc-builder-section">
+        <h1 class="main-title">Bangun PC Impian Anda</h1>
+        <p class="subtitle">Pilih komponen terbaik untuk rig Anda. Total harga akan ter-update secara otomatis.</p>
+        
+        <div class="pc-builder-container">
+            <div class="component-selection">
+                <div class="component-slot" id="processor-slot" data-type="processor"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-microchip"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Processor</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="motherboard-slot" data-type="motherboard"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-server"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Motherboard</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="ram-slot" data-type="ram"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-memory"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>RAM Sticks</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="gpu-slot" data-type="gpu"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-gamepad"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Graphic Card</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="storage-slot" data-type="storage"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-hard-drive"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Storage</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="psu-slot" data-type="psu"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Power Supply</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="casing-slot" data-type="casing"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-computer"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Casing</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+                <div class="component-slot" id="cooling-slot" data-type="cooling"><button class="btn-remove-component">&times;</button><div class="slot-icon"><i class="fa-solid fa-fan"></i></div><img class="slot-product-image" src="" alt="Produk terpilih"><div class="slot-details"><h3>Cooling System</h3><p class="product-name">Pilih sebuah komponen</p></div><div class="slot-price" data-price="0"></div><button class="btn-pilih">Pilih</button></div>
+            </div>
+            <div class="build-summary">
+                <h2>Ringkasan Rakitan Anda</h2>
+                <div class="total-price-container">
+                    <h3>Total Estimasi Harga:</h3>
+                    <p id="total-price">Rp 0</p>
+                </div>
+                <button class="btn-add-to-cart" disabled>Tambahkan ke Keranjang</button>
+                <div class="compatibility-notice">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>Pastikan semua komponen yang Anda pilih kompatibel satu sama lain.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="componentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Pilih Komponen</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalProductsGrid" class="products-grid-modal">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="warningModal" class="modal">
+        <div class="modal-content warning-modal">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> Rakitan Belum Lengkap</h2>
+                <span id="closeWarningModal" class="close-button">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Anda belum memilih semua komponen yang diperlukan. Apakah Anda yakin ingin melanjutkan ke keranjang?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-return-to-build" class="btn-modal">Kembali Merakit</button>
+                <button id="btn-proceed-checkout" class="btn-modal primary">Lanjutkan</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="about-us"><h3>About YKParts</h3><p>YKParts is your go-to destination for all computer parts. We connect buyers and sellers to ensure you get the best deals on quality parts.</p></div>
+            <div class="navigation"><h3>Navigation</h3><ul><li><a href="homepage.html">Home</a></li><li><a href="#">Shop</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="#">Contact Us</a></li></ul></div>
+            <div class="downloadApp"><h3>Download Our App</h3><p>Get the YKParts app for easy access to our services on the go.</p><div class="download-apps"><img src="logo/App Store.png" alt="App Store" /><img src="logo/Google Play.png" alt="Google Play" /></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 YKParts. All rights reserved.</p><p><a href="tandc.html">Terms of Service</a> | Privacy Policy</p></div>
+    </footer>
+
+    <script src="js/rakit-pc.js"></script>
+    <script src="js/animation.js" defer></script>
+</body>
+</html>

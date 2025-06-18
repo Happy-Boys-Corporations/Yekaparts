@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk ke YKParts</title>
+    <link rel="stylesheet" href="css/product.css"> 
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <header class="header">
+            <div class="logo">
+                <a href="homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo/online-test.png" alt="Logo" class="logo-img">
+                    <div class="brand">
+                        <h1>YKParts</h1>
+                        <p>Computer Store</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <h1>Masuk</h1>
+                    <a href="signup.html" class="link">Belum punya akun?</a>
+                </div>
+                <form id="signin-form" novalidate>
+                    <div class="input-group">
+                        <label for="username">Username atau Email</label>
+                        <input type="text" id="username" name="username">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="options">
+                        <a href="#" class="link">Lupa Password?</a>
+                    </div>
+                    <button type="submit" class="btn-auth">Masuk</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

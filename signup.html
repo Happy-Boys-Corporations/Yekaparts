@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Baru - YKParts</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <header class="header">
+            <div class="logo">
+                <a href="homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+                    <img src="logo/online-test.png" alt="Logo" class="logo-img">
+                    <div class="brand">
+                        <h1>YKParts</h1>
+                        <p>Computer Store</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-header">
+                    <h1>Buat Akun</h1>
+                    <a href="signinpage.html" class="link">Sudah punya akun?</a>
+                </div>
+                <form id="signup-form" novalidate>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Konfirmasi Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn-auth">Daftar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

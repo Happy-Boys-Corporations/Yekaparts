@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - YKParts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/Checkout.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <a href="homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+            <img src="logo/online-test.png" alt="Logo" class="logo-img">
+            <div class="brand">
+                <h1>YKParts</h1>
+                <p>Computer Store</p>
+            </div>
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Cari di YKParts...">
+        <button class="search-button">
+            <span class="search-icon-wrapper"><img src="logo/search-interface-symbol.png" alt="Search"></span>
+        </button>
+    </div>
+    <div class="nav-icons">
+        <a href="wishlist.html" class="icon-container"><img src="logo/heart.png" alt="Wishlist" class="icon-wishlist"><span class="notification-badge">3</span></a>
+        <a href="cart.html" class="icon-container"><img src="logo/shopping-cart.png" alt="Cart"><span class="notification-badge">2</span></a>
+        <a href="signinpage.html" class="icon-container"><img src="logo/user.png" alt="Profile"></a>
+    </div>
+</header>
+
+<form id="checkout-form" novalidate>
+    <main class="checkout-container">
+        <div class="checkout-form">
+            <h1>Checkout</h1>
+
+            <section>
+                <h2>Informasi Kontak</h2>
+                <div class="input-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="anda@gmail.com" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Alamat Pengiriman</h2>
+                <div class="input-group">
+                    <label for="fullname">Nama Lengkap</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                    <span class="error-message" id="fullname-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="address">Alamat Lengkap</label>
+                    <input type="text" id="address" name="address" placeholder="Jalan, nomor rumah, RT/RW" required>
+                    <span class="error-message" id="address-error"></span>
+                </div>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label for="city">Kota/Kabupaten</label>
+                        <input type="text" id="city" name="city" placeholder="Jakarta Selatan" required>
+                        <span class="error-message" id="city-error"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="postcode">Kode Pos</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="12345" required>
+                        <span class="error-message" id="postcode-error"></span>
+                    </div>
+                </div>
+                 <div class="input-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="08123456789" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Metode Pembayaran</h2>
+                <div class="payment-options">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="bank-transfer" checked>
+                        <div class="payment-option-content">
+                            <span class="custom-radio"></span>
+                            <span class="payment-name">Bank Transfer</span>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="qris">
+                        <div class="payment-option-content">
+                            <span class="custom-radio"></span>
+                            <span class="payment-name">QRIS</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="bank-transfer-details" class="payment-details">
+                    <p>Silakan transfer ke salah satu rekening berikut:</p>
+                    <ul>
+                        <li><strong>BCA:</strong> 1234567890 (a/n YKParts)</li>
+                        <li><strong>Mandiri:</strong> 0987654321 (a/n YKParts)</li>
+                    </ul>
+                </div>
+                <div id="qris-details" class="payment-details" style="display: none;">
+                    <p>Silakan pindai kode QRIS di bawah ini:</p>
+                    <img src="logo/contoh-qris.png" alt="QRIS Code" class="qris-image">
+                </div>
+            </section>
+        </div>
+
+        <aside class="order-summary">
+            <h2>Ringkasan Pesanan</h2>
+            <div class="summary-items">
+                <div class="summary-item">
+                    <img src="productPictures/COOLERMASTERHYPER212.jpg" alt="Cooler">
+                    <div class="item-details">
+                        <p class="item-name">Cooler Master Hyper 212</p>
+                        <p class="item-quantity">Qty: 1</p>
+                    </div>
+                    <p class="item-price">Rp 650.000</p>
+                </div>
+                 <div class="summary-item">
+                    <img src="productPictures/NZXTH5FLOWWHITE.jpg" alt="Casing">
+                    <div class="item-details">
+                        <p class="item-name">NZXT H5 Flow</p>
+                        <p class="item-quantity">Qty: 2</p>
+                    </div>
+                    <p class="item-price">Rp 3.000.000</p>
+                </div>
+            </div>
+            <div class="summary-calculation">
+                <div class="calc-row">
+                    <span>Subtotal</span>
+                    <span>Rp 3.650.000</span>
+                </div>
+                <div class="calc-row">
+                    <span>Ongkos Kirim</span>
+                    <span>Gratis</span>
+                </div>
+                <div class="calc-row total">
+                    <span>Total</span>
+                    <span>Rp 3.650.000</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-pay-now">Bayar Sekarang</button>
+        </aside>
+    </main>
+</form>
+
+<div id="checkout-success" class="checkout-success-container" style="display: none;">
+    <h2>✅ Pembayaran Berhasil!</h2>
+    <p>Terima kasih telah berbelanja di YKParts. Pesanan Anda sedang kami proses.</p>
+    <a href="homepage.html" class="btn-back-home">Kembali ke Beranda</a>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="about-us">
+            <h3>About YKParts</h3>
+            <p>YKParts is your go-to destination for all computer parts. We connect buyers and sellers to ensure you get the best deals on quality parts.</p>
+        </div>
+        <div class="navigation">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="downloadApp">
+            <h3>Download Our App</h3>
+            <p>Get the YKParts app for easy access to our services on the go.</p>
+            <div class="download-apps">
+                <img src="logo/App Store.png" alt="App Store" />
+                <img src="logo/Google Play.png" alt="Google Play" />
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 YKParts. All rights reserved.</p>
+        <p><a href="tandc.html">Terms of Service</a> | Privacy Policy</p>
+    </div>
+</footer>
+
+<script src="js/checkout.js"></script>
+</body>
+</html>

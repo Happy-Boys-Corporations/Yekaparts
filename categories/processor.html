@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>YKParts : Processor Catalogue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/product.css" rel="stylesheet" />
+  <link href="../css/product-detail.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+                <img src="../logo/online-test.png" alt="Logo" class="logo-img">
+                <div class="brand">
+                    <h1>YKParts</h1>
+                    <p>Computer Store</p>
+                </div>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari Processor...">
+            <button class="search-button">
+                <span class="search-icon-wrapper"><img src="../logo/search-interface-symbol.png" alt="Search"></span>
+            </button>
+        </div>
+        <div class="nav-icons">
+            <a href="../wishlist.html" class="icon-container"><img src="../logo/heart.png" alt="Wishlist" class="icon-wishlist"><span class="notification-badge">3</span></a>
+            <a href="../cart.html" class="icon-container"><img src="../logo/shopping-cart.png" alt="Cart"><span class="notification-badge">1</span></a>
+            <a href="../signinpage.html" class="icon-container"><img src="../logo/user.png" alt="Profile"></a>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="../homepage.html" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-item active">Processor</span>
+    </div>
+
+    <main class="products-section">
+      <div class="container">
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>All Categories</h3>
+            <ul class="categories-list">
+              <li><a href="processor.html" class="active">Processor</a></li>
+              <li><a href="motherboard.html">Motherboard</a></li>
+              <li><a href="ram-sticks.html">RAM Sticks</a></li>
+              <li><a href="graphic-cards.html">Graphic Cards</a></li>
+              <li><a href="storage.html">Storage</a></li>
+              <li><a href="power-supply.html">Power Supply</a></li>
+              <li><a href="cooling.html">Cooling</a></li>
+              <li><a href="casing.html">Casing</a></li>
+              <li><a href="peripherals.html">Peripherals</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h3>Price</h3>
+            <div class="price-slider">
+              <input type="range" min="1000000" max="15000000" value="8000000" class="slider">
+              <div class="price-range">
+                <span>Price: </span>
+                <span class="price-value">Rp 1.000.000 — Rp 15.000.000</span>
+              </div>
+            </div>
+          </div>
+          <div class="discount-banner">
+            <h2><span class="highlight">79%</span> Discount</h2>
+            <p>on your first order</p>
+            <div class="shop-now">
+              <span>Shop Now</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="products-container">
+          <div class="filter-bar">
+            <span>Showing 1-5 of 23 results</span>
+            <div class="sort-section">
+              <label for="sort-select">Sort by:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="latest">Latest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <a href="Product Detail/processor/product-detail-i9.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/13900K.png" alt="Intel Core i9">
+                  <span class="product-tag">New</span>
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/processor/product-detail-i9.html" class="product-title-link"><h4 class="product-title">Intel Core i9-13900K</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 9.850.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/processor/product-detail-ryzen9.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/7950X.png" alt="AMD Ryzen 9">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/processor/product-detail-ryzen9.html" class="product-title-link"><h4 class="product-title">AMD Ryzen 9 7950X</h4></a>
+                <div class="product-rating">★★★★★</div>
+                <p class="product-price">Rp 10.500.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/processor/product-detail-i5.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/13600k.png" alt="Intel Core i5">
+                  <span class="product-tag sale">-15%</span>
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/processor/product-detail-i5.html" class="product-title-link"><h4 class="product-title">Intel Core i5-13600K</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 4.800.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/processor/product-detail-ryzen7.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/Ryzen7.jpg" alt="AMD Ryzen 7">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/processor/product-detail-ryzen7.html" class="product-title-link"><h4 class="product-title">AMD Ryzen 7 7800X3D</h4></a>
+                <div class="product-rating">★★★★★</div>
+                <p class="product-price">Rp 6.500.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/processor/product-detail-i7.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/13700K.png" alt="Intel Core i7">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/processor/product-detail-i7.html" class="product-title-link"><h4 class="product-title">Intel Core i7-13700K</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 6.200.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        </footer>
+    <script src="../js/animation.js" defer></script>
+</body>
+</html>

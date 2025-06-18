@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Saya - YKParts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <a href="homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+            <img src="logo/online-test.png" alt="Logo" class="logo-img">
+            <div class="brand">
+                <h1>YKParts</h1>
+                <p>Computer Store</p>
+            </div>
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Cari di YKParts...">
+        <button class="search-button">
+            <span class="search-icon-wrapper"><img src="logo/search-interface-symbol.png" alt="Search"></span>
+        </button>
+    </div>
+    <div class="nav-icons">
+        <a href="wishlist.html" class="icon-container"><img src="logo/heart.png" alt="Wishlist" class="icon-wishlist"><span class="notification-badge">3</span></a>
+        <a href="cart.html" class="icon-container"><img src="logo/shopping-cart.png" alt="Cart"><span class="notification-badge">1</span></a>
+        <a href="signinpage.html" class="icon-container"><img src="logo/user.png" alt="Profile"></a>
+    </div>
+</header>
+
+<main class="page-container">
+    <h1>Wishlist Saya</h1>
+    <div class="wishlist-content">
+        <table class="wishlist-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Produk</th>
+                    <th>Harga</th>
+                    <th>Status Stok</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="product-image-cell">
+                        <img src="productPictures/COOLERMASTERHYPER212.jpg" alt="Cooler Master">
+                    </td>
+                    <td class="product-name-cell">
+                        Cooler Master Hyper 212 CPU Cooler
+                    </td>
+                    <td>Rp 650.000</td>
+                    <td><span class="stock-status in-stock">In Stock</span></td>
+                    <td class="action-cell">
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                        <button class="btn-remove">×</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="product-image-cell">
+                        <img src="productPictures/LOGITECHGPROTKL.png" alt="Logitech Keyboard">
+                    </td>
+                    <td class="product-name-cell">
+                        Logitech G Pro X TKL Mechanical Keyboard
+                    </td>
+                    <td>Rp 2.500.000</td>
+                    <td><span class="stock-status in-stock">In Stock</span></td>
+                    <td class="action-cell">
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                        <button class="btn-remove">×</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="product-image-cell">
+                        <img src="productPictures/4090.png" alt="RTX 4090">
+                    </td>
+                    <td class="product-name-cell">
+                        NVIDIA GeForce RTX 4090
+                    </td>
+                    <td>Rp 30.000.000</td>
+                    <td><span class="stock-status out-of-stock">Out of Stock</span></td>
+                    <td class="action-cell">
+                        <button class="btn-add-to-cart" disabled>Add to Cart</button>
+                        <button class="btn-remove">×</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="about-us">
+            <h3>About YKParts</h3>
+            <p>YKParts is your go-to destination for all computer parts. We connect buyers and sellers to ensure you get the best deals on quality parts.</p>
+        </div>
+        <div class="navigation">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="downloadApp">
+            <h3>Download Our App</h3>
+            <p>Get the YKParts app for easy access to our services on the go.</p>
+            <div class="download-apps">
+                <img src="logo/App Store.png" alt="App Store" />
+                <img src="logo/Google Play.png" alt="Google Play" />
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 YKParts. All rights reserved.</p>
+        <p><a href="tandc.html">Terms of Service</a> | Privacy Policy</p>
+    </div>
+</footer>
+
+</body>
+</html>

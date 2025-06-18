@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-blue: #006db2; /* Warna biru khas YKParts */
+    --background-light: #f4f5f7;
+    --text-dark: #31353b;
+    --text-light: #6d7588;
+    --border-color: #e5e7e9;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-container img {
+    height: 40px;
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 25px;
+}
+
+.header-text h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header-text .register-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-text .register-link:hover {
+    color: #004a7c;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 109, 178, 0.15);
+}
+
+.options {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.options .forgot-password {
+    font-size: 13px;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #00568c;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 25px;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    .header-text .register-link {
+        font-size: 13px;
+    }
+}

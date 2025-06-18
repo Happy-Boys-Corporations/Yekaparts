@@ -1,0 +1,609 @@
+:root {
+    --primary-blue: #0A84FF;
+    --primary-green: #34C759;
+    --gray-900: #1D1D1F;
+    --gray-500: #86868B;
+    --gray-100: #F5F5F7;
+    --soft-blue: #f0f8ff;
+    --soft-green: #e8f8e9;
+    --border-color: #e5e5e5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.pc-builder-section {
+    padding: 2rem 4rem;
+    background-color: #f9f9f9;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pc-builder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.component-selection {
+    flex: 2.5;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.build-summary {
+    flex: 1;
+    min-width: 320px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    position: sticky;
+    top: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.build-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.breadcrumbs {
+    padding: 1rem 3.75rem;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item:hover {
+    color: var(--primary-blue);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+.component-slot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.component-slot:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary-blue);
+}
+
+.slot-icon {
+    font-size: 2rem;
+    color: var(--gray-500);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-100);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.slot-product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: none;
+}
+
+.slot-details {
+    flex-grow: 1;
+}
+
+.slot-details h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.slot-details .product-name {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    transition: color 0.3s ease;
+}
+
+.slot-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    min-width: 120px;
+    text-align: right;
+}
+
+.btn-pilih {
+    padding: 0.7rem 1.5rem;
+    background-image: linear-gradient(to top, #0A84FF, #3795ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.btn-pilih:hover {
+    background-image: linear-gradient(to top, #1a8eff, #4aa1ff);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-remove-component {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    background-color: #e2e2e2;
+    color: #555;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 5;
+}
+
+.component-slot.selected .btn-remove-component {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+.btn-remove-component:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.component-slot.selected {
+    border-style: solid;
+    border-color: var(--primary-green);
+    background-color: var(--soft-green);
+    box-shadow: 0 4px 15px rgba(52, 199, 89, 0.1);
+}
+
+.component-slot.selected .slot-icon {
+    display: none;
+}
+
+.component-slot.selected .slot-product-image {
+    display: block;
+}
+
+.component-slot.selected .product-name {
+    color: #333;
+    font-weight: 500;
+}
+
+.component-slot.selected .btn-pilih {
+    background-image: linear-gradient(to top, #ff9500, #ffb340);
+}
+
+.component-slot.selected .btn-pilih:hover {
+    background-image: linear-gradient(to top, #ff9f1a, #ffbe5a);
+    box-shadow: 0 4px 8px rgba(255, 149, 0, 0.2);
+}
+
+.total-price-container {
+    background-color: var(--soft-blue);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.total-price-container h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--gray-500);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#total-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 0;
+    transition: color 0.3s ease; 
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-image: linear-gradient(to top, #34C759, #4dde70);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-add-to-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 199, 89, 0.3);
+}
+
+.btn-add-to-cart:disabled {
+    background-image: none;
+    background-color: #c5c5c5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.compatibility-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #fffbe6;
+    color: #8a6d3b;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    border: 1px solid #ffeeba;
+}
+
+.compatibility-notice i {
+    font-size: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.4s;
+}
+
+.modal-content {
+    background-color: #f7f8fa; 
+    margin: 4% auto;
+    padding: 1.5rem; 
+    border: none; 
+    width: 80%;
+    max-width: 800px; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.5s ease-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; 
+    margin-bottom: 1rem;
+    border-bottom: none; 
+}
+
+.modal-header h2 {
+    color: #1D1D1F; 
+    font-size: 1.5rem;
+}
+
+.close-button {
+    color: #86868B;
+    font-size: 28px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: #1D1D1F;
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.products-grid-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.product-card-modal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+    border: 1px solid transparent; 
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.product-card-modal:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 6px 25px rgba(10, 132, 255, 0.15);
+}
+
+.product-card-modal img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 1.5rem;
+}
+
+.product-card-modal h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--gray-900);
+    flex-grow: 1; 
+}
+
+.product-card-modal p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin: 0 1.5rem 0 1rem;
+    min-width: 120px;
+    text-align: right;
+}
+
+.btn-pilih-produk {
+    width: auto;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap; 
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-pilih-produk:hover {
+    background-color: #006ae6;
+    transform: scale(1.05);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    border: 2px solid #f7f8fa;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}
+
+.products-grid-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+}
+
+.product-card-modal {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    text-align: left; 
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.product-card-modal:hover {
+    border-color: var(--primary-blue);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transform: scale(1.01);
+}
+
+.product-card-modal img {
+    width: 70px; 
+    height: 70px;
+    object-fit: contain;
+    margin-right: 1.5rem; 
+}
+
+.product-card-modal h4 {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--gray-900);
+    flex-grow: 1;
+}
+
+.product-card-modal p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin: 0 1.5rem 0 1rem; 
+    min-width: 120px; 
+    text-align: right;
+}
+
+.btn-pilih-produk {
+    width: auto; 
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pilih-produk:hover {
+    background-color: #0056b3;
+}
+
+.warning-modal {
+    max-width: 500px;
+}
+
+.warning-modal .modal-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #f0ad4e;
+    font-size: 1.25rem;
+}
+
+.warning-modal .modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.warning-modal .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-modal {
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    transition: all 0.2s ease;
+}
+
+.btn-modal:hover {
+    background-color: #e7e7e7;
+    border-color: #999;
+}
+
+.btn-modal.primary {
+    background-color: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+.btn-modal.primary:hover {
+    background-color: #28a148;
+    border-color: #28a148;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes price-update {
+    0% {
+        transform: scale(1);
+        color: var(--primary-blue);
+    }
+    50% {
+        transform: scale(1.1);
+        color: var(--primary-green);
+    }
+    100% {
+        transform: scale(1);
+        color: var(--primary-blue);
+    }
+}
+
+.price-updated {
+    animation: price-update 0.6s ease-in-out;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>YKParts : RAM Sticks Catalogue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/product.css" rel="stylesheet" />
+  <link href="../css/product-detail.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../homepage.html" style="text-decoration:none; color:inherit; display:flex; align-items: center; gap: 0.5rem;">
+                <img src="../logo/online-test.png" alt="Logo" class="logo-img">
+                <div class="brand">
+                    <h1>YKParts</h1>
+                    <p>Computer Store</p>
+                </div>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Cari RAM Sticks...">
+            <button class="search-button">
+                <span class="search-icon-wrapper"><img src="../logo/search-interface-symbol.png" alt="Search"></span>
+            </button>
+        </div>
+        <div class="nav-icons">
+            <a href="../wishlist.html" class="icon-container"><img src="../logo/heart.png" alt="Wishlist" class="icon-wishlist"><span class="notification-badge">3</span></a>
+            <a href="../cart.html" class="icon-container"><img src="../logo/shopping-cart.png" alt="Cart"><span class="notification-badge">1</span></a>
+            <a href="../signinpage.html" class="icon-container"><img src="../logo/user.png" alt="Profile"></a>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <a href="../homepage.html" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-item active">RAM Sticks</span>
+    </div>
+
+    <main class="products-section">
+      <div class="container">
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>All Categories</h3>
+            <ul class="categories-list">
+              <li><a href="processor.html">Processor</a></li>
+              <li><a href="motherboard.html">Motherboard</a></li>
+              <li><a href="ram-sticks.html" class="active">RAM Sticks</a></li>
+              <li><a href="graphic-cards.html">Graphic Cards</a></li>
+              <li><a href="storage.html">Storage</a></li>
+              <li><a href="power-supply.html">Power Supply</a></li>
+              <li><a href="cooling.html">Cooling</a></li>
+              <li><a href="casing.html">Casing</a></li>
+              <li><a href="peripherals.html">Peripherals</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h3>Price</h3>
+            <div class="price-slider">
+              <input type="range" min="500000" max="5000000" value="2500000" class="slider">
+              <div class="price-range">
+                <span>Price: </span>
+                <span class="price-value">Rp 500.000 — Rp 5.000.000</span>
+              </div>
+            </div>
+          </div>
+          <div class="discount-banner">
+            <h2><span class="highlight">79%</span> Discount</h2>
+            <p>on your first order</p>
+            <div class="shop-now">
+              <span>Shop Now</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="products-container">
+          <div class="filter-bar">
+            <span>Showing 1-5 of 24 results</span>
+            <div class="sort-section">
+              <label for="sort-select">Sort by:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="latest">Latest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <a href="Product Detail/ram/product-detail-corsair.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/CORSAIRVENGEANCE.png" alt="Corsair Vengeance">
+                  <span class="product-tag">New</span>
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/ram/product-detail-corsair.html" class="product-title-link"><h4 class="product-title">Corsair Vengeance RGB DDR5 32GB</h4></a>
+                <div class="product-rating">★★★★★</div>
+                <p class="product-price">Rp 2.150.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/ram/product-detail-gskill.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/GSKILLTRIDENT.png" alt="G.Skill Trident Z5">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/ram/product-detail-gskill.html" class="product-title-link"><h4 class="product-title">G.Skill Trident Z5 Neo RGB 32GB</h4></a>
+                <div class="product-rating">★★★★★</div>
+                <p class="product-price">Rp 2.400.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/ram/product-detail-kingston.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/KINGSTONFURYBEAST.png" alt="Kingston Fury">
+                  <span class="product-tag sale">-5%</span>
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/ram/product-detail-kingston.html" class="product-title-link"><h4 class="product-title">Kingston Fury Beast 16GB</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 980.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/ram/product-detail-teamgroup.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/TEAM_T-FORCE.png" alt="Teamgroup T-Force">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/ram/product-detail-teamgroup.html" class="product-title-link"><h4 class="product-title">Teamgroup T-Force Delta RGB 16GB</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 890.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <a href="Product Detail/ram/product-detail-crucial.html">
+                <div class="product-image-container">
+                  <img src="../productPictures/CRUCIALBALLISTIX.jpg" alt="Crucial Pro">
+                </div>
+              </a>
+              <div class="product-info">
+                <a href="Product Detail/ram/product-detail-crucial.html" class="product-title-link"><h4 class="product-title">Crucial Pro DDR5 32GB</h4></a>
+                <div class="product-rating">★★★★☆</div>
+                <p class="product-price">Rp 1.750.000</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        </footer>
+    <script src="../js/animation.js" defer></script>
+</body>
+</html>
